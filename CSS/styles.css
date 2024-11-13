@@ -14,9 +14,9 @@
     display: flex;
     justify-content: space-around;
 }
-p{
+.p_nav_index{
     color: black;
 }
-a{
+.a_index{
     text-decoration: none;
 }
