@@ -1,22 +1,22 @@
 /*------------------------------------General------------------------------*/
-header img {
+
+.logo{
+    width: 150px;
+    justify-content: center;
     border-radius: 50px;
 }
-
-header {
+.seccion_logo{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
-
-header ul {
+.nav_index{
     display: flex;
-    list-style: none;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-
-header ul li{
-    background-color: rgba(165, 42, 42, 0.393);
-    color: white;
-    padding: 5px 20px;
+p{
+    color: black;
+}
+a{
+    text-decoration: none;
 }
