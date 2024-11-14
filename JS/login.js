@@ -1,13 +1,13 @@
-const email = document.getElementById('email').value;
-const password = document.getElementById('password').value;
+let email = document.getElementById('email').value;
+let password = document.getElementById('password').value;
 
-if (email.length = 0){
-    alert("Por favor complete el campo email");
-    return;
-}
 
-if (password.length = 0){
-    alert("Por favor complete el campo contraseña");
-    return;
-}
+let boton= document.querySelector(`.boton_login`)
+boton.addEventListener("click",function(){
 
+    if (email === "") {
+        alert("El campo de email no puede estar vacío");
+    } else if(password===""){
+        alert("El campo de contraseña no puede estar vacío");
+    }
+})
