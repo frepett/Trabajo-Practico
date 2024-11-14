@@ -1,6 +1,3 @@
-console.log("puto")
-
-
 fetch('https://dummyjson.com/recipes')
 .then(function(response){
     return response.json();
@@ -11,13 +8,14 @@ fetch('https://dummyjson.com/recipes')
         let seccion_cat = document.querySelector(".picante")
         
         let categoria =""
-        for (let i=0; i.categoria.length; i++){
+
+        for (let i=0; i<data.recipes.length; i++){
             categoria += `<article>
-            <p>${data.recipes[i].mealType}</p>
+            <a>Categoria:${data.recipes[i].mealType}</a>
             </article>`;
             
         } 
-        picante.innerHTML=categoria
+        seccion_cat.innerHTML=categoria
         
     }
 )
