@@ -1,5 +1,7 @@
 /*------------------------------------General------------------------------*/
-
+header {
+    background-color: rgba(165, 42, 42, 0.568);
+}
 .logo{
     width: 150px;
     justify-content: center;
@@ -19,4 +21,16 @@
 }
 .a_index{
     text-decoration: none;
+}
+/*-------------------------------------------------body index---------------------------------*/
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu img {
+    width: 250px;
 }
