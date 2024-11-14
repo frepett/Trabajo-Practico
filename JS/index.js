@@ -7,7 +7,7 @@ fetch('https://dummyjson.com/recipes')
         console.log(data);
         let menu = document.querySelector(".menu")
         let titulo =""
-        for (let i=0; i<data.recipes.length; i++){
+        for (let i=0; i<10; i++){
             console.log(i)
             titulo = titulo + `<article>
             <img src=${data.recipes[i].image} alt = "">
