@@ -18,6 +18,9 @@ header {
 }
 .p_nav_index{
     color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 .a_index{
     text-decoration: none;

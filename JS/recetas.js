@@ -11,7 +11,8 @@ fetch('https://dummyjson.com/recipes')
             console.log(i)
             titulo = titulo + `<article>
             <img src=${data.recipes[i].image} alt = "">
-            <a href="./index.html?id=${data.recipes[i].id}">Plato:${data.recipes[i].name}</a>
+            <a href="./index.html?id=${data.recipes[i].id}">Plato: ${data.recipes[i].name}</a>
+            <p>Instrucciones:${data.recipes[i].instructions}</p>
             <p>Dificultad: ${data.recipes[i].difficulty}</p>
             <article>`;
         } 
@@ -23,4 +24,3 @@ fetch('https://dummyjson.com/recipes')
 {
     console.log(error)
 })
- 
