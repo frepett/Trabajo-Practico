@@ -11,10 +11,10 @@ fetch('https://dummyjson.com/recipes')
         for (let i=0; i<10; i++){
             console.log(i)
             titulo += `<article class="article_de_fotos">
-            <img src=${data.recipes[i].image} alt = "" class="imagen_recetas">
+            <img src=${data.recipes[i].image} alt = "" >
             <a class="plato" href="./index.html?id=${data.recipes[i].id}">
             Plato: ${data.recipes[i].name}</a>
-            <p >Dificultad: ${data.recipes[i].difficulty}</p>
+            <p class="dificultad" >Dificultad: ${data.recipes[i].difficulty}</p>
             </article>`;
             
         } 

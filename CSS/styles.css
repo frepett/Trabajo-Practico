@@ -47,14 +47,17 @@ header {
 }
 
 .menu img {
-    width: 250px;
+    
     margin: 20px;
+    width: 500px;
+    margin-top: 20px;
 }
 
 .plato{
    color:black;
    font-weight: bold;
 }
+
 
 .article_de_fotos{
     display: flex;
@@ -63,8 +66,14 @@ header {
     align-items: center;
     justify-content: center;
 }
-.imagen_recetas{
-    width: 500px;
-    margin: 0px;
-}
 
+
+/*--------------------------------------------------------login------------------------------------------*/
+
+.formslogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+    
