@@ -5,7 +5,7 @@ fetch('https://dummyjson.com/recipes')
 .then(
     function(data){
         console.log(data);
-        let menu = document.querySelector(".recipes")
+        let menu = document.querySelector(".menu")
         let titulo =""
         for (let i=0; i<data.recipes.length; i++){
             console.log(i)
@@ -15,7 +15,7 @@ fetch('https://dummyjson.com/recipes')
             <p>Ingredientes:${data.recipes[i].ingredients}</p>
             <p>Instrucciones:${data.recipes[i].instructions}</p>
             <p>Dificultad: ${data.recipes[i].difficulty}</p>
-            <article>`
+            <article>`;
         } 
         menu.innerHTML = titulo
     }
