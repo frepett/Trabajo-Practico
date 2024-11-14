@@ -38,9 +38,10 @@ header {
 
 .menu {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:  wrap;
     flex-direction:row;
     justify-content: space-around;
+    align-items: center;
     
 
 }
@@ -55,4 +56,15 @@ header {
    font-weight: bold;
 }
 
+.article_de_fotos{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.imagen_recetas{
+    width: 500px;
+    margin: 0px;
+}
 
