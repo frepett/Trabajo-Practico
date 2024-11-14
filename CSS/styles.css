@@ -1,11 +1,20 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
 /*------------------------------------General------------------------------*/
 header {
     background-color: rgba(165, 42, 42, 0.568);
 }
 .logo{
-    width: 150px;
+    width: 120px;
     justify-content: center;
     border-radius: 50px;
+    align-items: center;
+    margin: 5px;
 }
 .seccion_logo{
     display: flex;
@@ -30,10 +39,20 @@ header {
 .menu {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction:row;
     justify-content: space-around;
+    
+
 }
 
 .menu img {
     width: 250px;
+    margin: 20px;
 }
+
+.plato{
+   color:black;
+   font-weight: bold;
+}
+
+
