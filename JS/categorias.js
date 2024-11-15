@@ -11,7 +11,7 @@ fetch('https://dummyjson.com/recipes')
 
         for (let i=0; i<data.recipes.length; i++){
             categoria += `<article>
-            <a>Categoria:${data.recipes[i].mealType}</a>
+            <a>${data.recipes[i].mealType}</a>
             </article>`;
             
         } 
