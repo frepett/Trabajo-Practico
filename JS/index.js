@@ -12,9 +12,9 @@ fetch('https://dummyjson.com/recipes')
             console.log(i)
             titulo += `<article class="article_de_fotos">
             <img src=${data.recipes[i].image} alt = "" >
-            <a class="plato" href="./index.html?id=${data.recipes[i].id}">
+            <article class="article_foto_plato"><a class="plato" href="./index.html?id=${data.recipes[i].id}">
             Plato: ${data.recipes[i].name}</a>
-            <p class="dificultad" >Dificultad: ${data.recipes[i].difficulty}</p>
+            <p class="dificultad" >Dificultad: ${data.recipes[i].difficulty}</p></article>
             </article>`;
             
         } 
@@ -40,11 +40,5 @@ fetch('https://dummyjson.com/recipes')
 })
 
 
-fetch('https://dummyjson.com/recipes/search?q=Margherita')
-.then(res => res.json())
-.then(function(buscar){
-    console.log(buscar);
-    let buscador = document.querySelector(`.button_cargarmas`)
-    buscador = `<a>./detalles.html</a>`
-});
+
 
