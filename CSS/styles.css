@@ -102,15 +102,16 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0px;
     margin-bottom: 20px;
+    padding-bottom: 20px ;
+    padding-top: 0px;
+    border-radius: 15px;
 }
 
 .seccion_form_index{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .formulario_index{
@@ -160,4 +161,44 @@ header {
     align-items: center;
     margin-top: 20px;
 }
-    
+
+.seccion_detalles{
+    display: flex;
+    flex-wrap:  wrap;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;   
+}
+/*-----------------------------------------------------recteas---------------------------------------------------*/
+
+.seccion_detalles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.article_de_fotos_recetas_solo{
+    width: auto;
+    margin: 20px;
+}
+.imagen_recetas_sola{
+    width: 350px;
+    border-radius: 20px;
+}
+.plato_receta_solo{
+    color: white;
+}
+.dificultad_receta_solo{
+    color: white;
+}
+.articulo_titulo_dificultad{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(165, 42, 42, 0.568);
+    border-radius: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
