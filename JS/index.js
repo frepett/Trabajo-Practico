@@ -24,10 +24,10 @@ fetch('https://dummyjson.com/recipes')
         cargarmas.addEventListener('click', function(){
             for(let i=10;i<20;i++){
                 titulo += `<article class="article_de_fotos">
-                 <img src=${data.recipes[i].image} alt = "" >
+                 <img src=${data.recipes[i].image} alt = "" ><div>
                  <a class="plato" href="./index.html?id=${data.recipes[i].id}">
                  Plato: ${data.recipes[i].name}</a>
-                 <p class="dificultad" >Dificultad: ${data.recipes[i].difficulty}</p>
+                 <p class="dificultad" >Dificultad: ${data.recipes[i].difficulty}</p></div>
                 </article>`;
                 menu.innerHTML=titulo
             }

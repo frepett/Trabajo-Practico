@@ -76,13 +76,13 @@ header {
 .plato{
    color:black;
    font-weight: bold;
-   background-color: rgba(165, 42, 42, 0.568);
-   padding: 7px;
+   background-color:rgba(165, 42, 42, 0.568);
+   padding: 20px;
    color: white;
 }
 .dificultad{
-    background-color:rgba(165, 42, 42, 0.568); 
-    padding: 7px;
+    background-color:rgba(165, 42, 42, 0.568);
+    padding: 20px;
     color: white;
     padding-right:auto;
     margin-bottom: 30px;
@@ -94,7 +94,12 @@ header {
     width: 50%;
     align-items: center;
     justify-content: center;
+    border: 2px rgba(112, 128, 144, 1) solid;
 }
+.article_de_fotos img{
+    border-radius: 120px;
+}
+
 
 .seccion_form_index{
     display: flex;
