@@ -18,24 +18,28 @@
                 <a href="./login.html" class="a_index"><p class="p_nav_index">Login</p></a>
                 <a href="./registro.html" class="a_index"><p class="p_nav_index"> Registro</p></a>
         </nav>
-
-        <form action="./resultados.html" method="GET">
-            <label>Recetas: </label>
-            <input type="text" name="buscador" placeholder="Buscar" required>
-            <button type="submit" class="boton_index_forms">enviar</button>
-        </form>
-
+        
+        <section class="seccion_form_index">
+            <form action="./resultados.html" method="GET" class="formulario_index">
+                <label><b>Recetas: </b></label>
+                <input type="text" name="buscador" placeholder="Buscar" required>
+                <button type="submit" class="boton_index_forms">Buscar</button>
+            </form>
+        
+        </section>
     </header>
     
     <main>
         <section class="menu"></section>
-        <button class="button" type="submit"><label>Cargar mas</label></button>
+        <section class="seccion_boton_cargarmas">
+            <button class="button_cargarmas" type="submit"><b>Cargar mas</b></button>
+        </section>
     </main>
 
-    <footer> 
-        <p>Lorenzo Fernandez Arancibia</p>
-        <p>Felipe Repetto Echave</p>
-        <p>Bautista Saenz Valiente</p>
+    <footer class="footer_index"> 
+        <p class="p_footer_index">Lorenzo Fernandez Arancibia</p>
+        <p  class="p_footer_index">Felipe Repetto Echave</p>
+        <p  class="p_footer_index">Bautista Saenz Valiente</p>
     </footer>
 
     <script src="./JS/index.js"></script>

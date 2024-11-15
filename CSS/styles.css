@@ -8,13 +8,20 @@
 /*------------------------------------General------------------------------*/
 header {
     background-color: rgba(165, 42, 42, 0.568);
+    padding-bottom: 20px;
+    padding-top: 15px;
+    background-image: url(https://img.freepik.com/fotos-premium/concepto-cocina-ingredientes-cocinar_1220-5235.jpg?w=900);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgba(244, 235, 235, 0.4);
 }
+
+
 .logo{
     width: 120px;
     justify-content: center;
     border-radius: 50px;
     align-items: center;
-    margin: 5px;
 }
 .seccion_logo{
     display: flex;
@@ -24,6 +31,7 @@ header {
 .nav_index{
     display: flex;
     justify-content: space-around;
+    margin-top: 15px;
 }
 .p_nav_index{
     color: black;
@@ -33,6 +41,18 @@ header {
 }
 .a_index{
     text-decoration: none;
+}
+.footer_index{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(125, 27, 27, 0.568);
+    height: 150px;
+}
+
+.p_footer_index{
+    color: white;
+    font-weight: bold;
 }
 /*-------------------------------------------------body index---------------------------------*/
 
@@ -49,15 +69,24 @@ header {
 .menu img {
     
     margin: 20px;
-    width: 500px;
-    margin-top: 20px;
+    width: 450px;
+    margin-top: 35px;
 }
 
 .plato{
    color:black;
    font-weight: bold;
+   background-color: rgba(165, 42, 42, 0.568);
+   padding: 7px;
+   color: white;
 }
-
+.dificultad{
+    background-color:rgba(165, 42, 42, 0.568); 
+    padding: 7px;
+    color: white;
+    padding-right:auto;
+    margin-bottom: 30px;
+}
 
 .article_de_fotos{
     display: flex;
@@ -67,6 +96,51 @@ header {
     justify-content: center;
 }
 
+.seccion_form_index{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.formulario_index{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 350px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: beige;
+}
+
+.boton_index_forms{
+    margin-left: 10px;
+    padding: 4px;
+    background-color: rgba(165, 42, 42, 0.568);
+    font-size: bold;
+    color: white;
+    border-radius: 10px;
+    border-color: rgba(123, 25, 25, 0.568);
+}
+
+
+.seccion_boton_cargarmas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    height: 120px;
+}
+
+.button_cargarmas{
+    height:80%;
+    width: 85%;
+    border-radius: 20px ;
+    background-color: rgba(165, 42, 42, 0.568);
+    color: white;
+    font-size: 20px;
+}
 
 /*--------------------------------------------------------login------------------------------------------*/
 
