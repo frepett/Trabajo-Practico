@@ -22,7 +22,7 @@ fetch('https://dummyjson.com/recipes')
         
         let cargarmas = document.querySelector('.button_cargarmas')
         cargarmas.addEventListener('click', function(){
-            for(let i=0;i<10;i++){
+            for(let i=10;i<20;i++){
                 titulo += `<article class="article_de_fotos">
                  <img src=${data.recipes[i].image} alt = "" >
                  <a class="plato" href="./index.html?id=${data.recipes[i].id}">
@@ -38,3 +38,13 @@ fetch('https://dummyjson.com/recipes')
 {
     console.log(error)
 })
+
+
+fetch('https://dummyjson.com/recipes/search?q=Margherita')
+.then(res => res.json())
+.then(function(buscar){
+    console.log(buscar);
+    let buscador = document.querySelector(`.button_cargarmas`)
+    buscador = `<a>./detalles.html</a>`
+});
+
