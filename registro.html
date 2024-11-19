@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registrarme</title>
     <link rel="stylesheet" href="./CSS/styles.css">
 </head>
 <body>
@@ -21,10 +21,27 @@
         </nav>
 
     </header>
+    <main>
+        <form class="formslogin" action="./index.html" method="get">
+            <input type="email" value="" placeholder="Email" name="email" id="email">
+            <div class= "errorEmail"></div>
+            <input type="password" value="" placeholder="Contraseña" name="password" id="password">
+            <div class="errorPassword"></div>
+            <input type="checkbox" name="terminos" value="terminos" required><div class="terminos">Acepto terminos y condiciones</div>
+            <button class="botonlogin" type="submit" >Ingresar</button>
+            <label class="registrate">Ya tenes cuenta?</label>
+            <button class="botonlogin" type="submit"><a href="./login.html">Login</a></button>
+
+
+
+
+        </form>
+    </main>
     <footer>
         <p>Lorenzo Fernandez Arancibia</p>
         <p>Felipe Repetto Echave</p>
         <p>Bautista Saenz Valiente</p>
     </footer>
+    <script src="./JS/register.js"></script>
 </body>
 </html>
