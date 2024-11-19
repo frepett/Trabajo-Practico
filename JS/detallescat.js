@@ -1,11 +1,11 @@
-fetch('https://dummyjson.com/recipes')
+etch('https://dummyjson.com/recipes')
 .then(function(response){
     return response.json();
 })
 .then(
     function(data){
         console.log(data);
-        let seccion_cat = document.querySelector(".picante")
+        let seccion_cat = document.querySelector(".lpm")
         let categoria = ""
         let categoriasMostradas = []
 

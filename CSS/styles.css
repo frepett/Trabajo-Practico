@@ -171,7 +171,7 @@ footer p{
     gap: 10px;
     justify-content: center;
     align-items: center;
-    margin: 50px 600px;
+    margin: 50px 750px;
 }
 
 .botonlogin{
@@ -231,4 +231,16 @@ footer p{
     border-radius: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+/*----------------------------------------------------Categorias---------------------------------------------------*/
+.picante{
+    text-decoration: none;
+    color: black;
+}
+.categoria8{
+    text-decoration: none;
+    color: black;
+    display: flex;
+   justify-content: space-between;
 }
