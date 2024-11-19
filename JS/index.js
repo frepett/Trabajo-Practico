@@ -22,8 +22,9 @@ fetch('https://dummyjson.com/recipes')
 
         
         let cargarmas = document.querySelector('.button_cargarmas')
+        let fotos_cargadas=10;
         cargarmas.addEventListener('click', function(){
-            for(let i=10;i<20;i++){
+            for(let i = fotos_cargadas;i<fotos_cargadas+10 ;i++){
                 titulo += `<article class="article_de_fotos">
                  <img src=${data.recipes[i].image} alt = "" >
                 <article class="article_foto_plato"><a class="plato" href="./index.html?id=${data.recipes[i].id}">
@@ -31,7 +32,9 @@ fetch('https://dummyjson.com/recipes')
                  <p class="dificultad">Dificultad: ${data.recipes[i].difficulty}</p></article>
                 </article>`;
             }
+            fotos_cargadas=fotos_cargadas+10;
             menu.innerHTML=titulo
+
         })
 })
 
