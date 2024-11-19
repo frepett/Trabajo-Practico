@@ -6,7 +6,7 @@
     <title>Script Chef</title>
     <link rel="stylesheet" href="./CSS/styles.css">
 </head>
-<body>
+<body class="bodylogin">
     <header>
         
         <section class="seccion_logo">
@@ -22,10 +22,14 @@
 
     </header>
     <main>
-        <form action="./index.html" class="formslogin">
-            <input type="email" id="email" value="" placeholder="Email" name="email" required>
-            <input type="password" id="password" value="" placeholder="Contraseña" name="password" required>
-            <button type="submit" class="boton_login">Ingresar</button>
+        <form action="./index.html" class="formslogin" method="get">
+            <input type="email" value="" placeholder="Email" name="email" id="email">
+            <div class= "errorEmail"></div>
+            <input type="password" value="" placeholder="Contraseña" name="password" id="password">
+            <div class="errorPassword"></div>
+            <button class="botonlogin" type="submit" >Ingresar</button>
+            <label class="registrate">No tengo cuenta</label>
+            <button class="botonlogin" type="submit"><a href="./registro.html">Registrate</a></button>
         </form>
     </main>
     <footer>
