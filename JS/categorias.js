@@ -10,9 +10,9 @@ fetch('https://dummyjson.com/recipes')
         let categoriasMostradas = []
 
         for (let i=0; i<data.recipes.length; i++){
-            if(!categoriasMostradas.includes(data.recipes[i].mealType)){categoriasMostradas.push(data.recipes[i].mealType)}
+            if(!categoriasMostradas.includes(data.recipes[i].cuisine)){categoriasMostradas.push(data.recipes[i].cuisine)}
             categoria += `<article>
-            <a class="categoria8" href= "./detallecat.html">${data.recipes[i].mealType}</a>
+            <a class="categoria8" href= "./detallecat.html">${data.recipes[i].cuisine}</a>
             </article>`;
             
         } 
