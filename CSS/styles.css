@@ -261,3 +261,47 @@ footer p{
     display: flex;
    justify-content: space-between;
 }
+/*----------------------------------------------------detalles de recetas-------------------------------------------*/
+.main_detalles{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px ;
+
+}
+.seccion_detalles_de_recetas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.article_detalles_receta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.imagen_receta_detalles{
+    width: 500px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+.detalles_titulo_tp_tc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    background-color: rgba(165, 42, 42, 0.568);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+}
+.detalles_titulo_solo{
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.a_detalles_categoria{
+    text-decoration: none;
+    color: white;
+    
+}

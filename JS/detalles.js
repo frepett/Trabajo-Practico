@@ -2,22 +2,30 @@ let queryString = location.search
 let queryStringObjeto = new URLSearchParams(queryString)
 let extraer = queryStringObjeto.get("id")
 console.log(extraer)
-let seccion_detalles=document.querySelector(".seccion_detalles")
+let seccion_detalles_de_recetas=document.querySelector(".seccion_detalles_de_recetas")
 
 
-fetch(`https://dummyjson.com/recipes/search?q=Margherita${extraer}`)
+fetch(`https://dummyjson.com/recipes/${extraer}`)
 .then(function(response){
-    return response.json
+    return response.json()
 })
 .then(function(data){
     console.log(data);
- let nombre_receta=document.querySelector(".nombre_receta")
- nombre_receta.innerText = data.name;
- let imagen =document.querySelector(".imagen_receta")
-imagen.src = data.image;
+    seccion_detalles_de_recetas.innerHTML += `<article class="article_detalles_receta">
+                <div class="detalles_titulo_solo">
+                    <h2>${data.name}</h2>
+                </div>
 
+                <img src="${data.image}" alt="" class="imagen_receta_detalles">
+                <article class="detalles_titulo_tp_tc">
+                    <p><b>Tiempo de preparación:</b> ${data.prepTimeMinutes} minutos</p>
+                    <p><b>Tiempo de cocción:</b> ${data.cookTimeMinutes} minutos</p>
+                    <a class="a_detalles_categoria" href="./categorias.html"><b>Categorias: </b>${data.mealType}</a>
+                </article>
+               
+                <p><b>Instrucciones:</b></p><p>${data.instructions}</p>
+            </article>`
 })
-
 .catch( function (error){
     console.log(error);
 })

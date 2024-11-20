@@ -1,4 +1,4 @@
-etch('https://dummyjson.com/recipes')
+etch('https://dummyjson.com/recipes/meal-type/snack')
 .then(function(response){
     return response.json();
 })
