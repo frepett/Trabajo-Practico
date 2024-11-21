@@ -14,9 +14,9 @@ fetch(`https://dummyjson.com/recipes/${extraer}`)
         
 
         for (let i=0; i<data.recipes.length; i++){
-            if(!categoriasMostradas.includes(data.recipes[i].mealType)){categoriasMostradas.push(data.recipes[i].mealType)}
+            if(!categoriasMostradas.includes(data.recipes[i].tags[0])){categoriasMostradas.push(data.recipes[i].tags[0])}
             categoria += `<article>
-            <a class="categoria8" href= "./detallecat.html">${data.recipes[i].mealType}</a>
+            <a class="categoria8" href= "./detallecat.html">${data.recipes[i].tags}</a>
             </article>`;
             
         } 

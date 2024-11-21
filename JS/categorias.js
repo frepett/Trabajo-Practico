@@ -10,8 +10,8 @@ fetch('https://dummyjson.com/recipes')
         let categoriasMostradas = []
 
         for (let i=0; i<data.recipes.length; i++){
-            if (!categoriasMostradas.includes(data.recipes[i].tags)){
-                categoriasMostradas.push(data.recipes[i].tags);}
+            if (!categoriasMostradas.includes(data.recipes[i].tags[0])){
+                categoriasMostradas.push(data.recipes[i].tags[0]);}
             
         } 
         console.log(categoriasMostradas)
