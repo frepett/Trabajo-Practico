@@ -43,3 +43,16 @@ fetch('https://dummyjson.com/recipes')
     console.log(error)
 })
 
+let formulario =document.querySelector(".formulario_index")
+let buscador=document.querySelector(".buscador")
+ formulario.addEventListener("submit",function(evento){
+    evento.preventDefault()
+    if (buscador.value.length<3){
+        formulario_index_menos_que3.style.display="block"
+        formulario_index_menos_que3.innerHTML="<p>La busqueda tiene que tener mino 3 caracteres</p>"
+
+    }
+
+ }
+)
+
