@@ -1,6 +1,6 @@
 let queryString = location.search
 let queryStringObjeto = new URLSearchParams(queryString)
-let extraer = queryStringObjeto.get("article_de_cada_categoria")
+let extraer = queryStringObjeto.get("tags")
 
 fetch(`https://dummyjson.com/recipes/${extraer}`)
 .then(function(response){
