@@ -4,7 +4,6 @@ let extraer = queryStringObjeto.get("buscador")
 console.log(extraer)
 let seccion_detalles=document.querySelector(".seccion_detalles")
 
-
 fetch(`https://dummyjson.com/recipes/search?q=${extraer}`)
 .then(function(response){
     return response.json()

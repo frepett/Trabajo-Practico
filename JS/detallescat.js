@@ -1,11 +1,12 @@
 let queryString = location.search
 let queryStringObjeto = new URLSearchParams(queryString)
-let extraer = queryStringObjeto.get("tags")
+let tag = queryStringObjeto.get("tags")
 
-fetch(`https://dummyjson.com/recipes/${extraer}`)
+fetch(`https://dummyjson.com/recipes`)
 .then(function(response){
     return response.json();
 })
+
 .then(
     function(data){
         console.log(data);
@@ -14,17 +15,18 @@ fetch(`https://dummyjson.com/recipes/${extraer}`)
         
 
         for (let i=0; i<data.recipes.length; i++){
-            if(!categoriasMostradas.includes(data.recipes[i].tags[0])){categoriasMostradas.push(data.recipes[i].tags[0])}
-            categoria += `<article>
-            <a class="categoria8" href= "./detallecat.html">${data.recipes[i].tags}</a>
-            </article>`;
-            
-        } 
-        seccion_cat.innerHTML=categoria
-       
-    }
-)
-.catch(function(error)
-{
+            if(data.recipes[i].tags.includes(tag)){
+                categoria+= `<article>
+            <img src=${data.recipes[i].image} alt = "" >
+            <article class="article_foto_plato"><a class="plato" href="./detalles.html?id=${data.recipes[i].id}">
+            Plato: ${data.recipes[i].name}</a>
+            <p class="dificultad" >Dificultad: ${data.recipes[i].difficulty}</p></article>
+            </article>`} 
+        seccion_cat.innerHTML
+    }})
+
+    
+
+.catch(function(error){
     console.log(error)
 })
