@@ -127,9 +127,11 @@ footer p{
 }
 .formulario_index_menos_que3{
     color: red;
-    width: 100%;
+    width: 95%;
     height: 10px;
     display: none;
+    margin-top: 3px;
+
  
 }
 .input_boton_formulario_index{
