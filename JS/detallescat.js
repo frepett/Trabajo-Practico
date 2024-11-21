@@ -1,13 +1,17 @@
-etch('https://dummyjson.com/recipes/meal-type/snack')
+let queryString = location.search
+let queryStringObjeto = new URLSearchParams(queryString)
+let extraer = queryStringObjeto.get("article_de_cada_categoria")
+
+fetch(`https://dummyjson.com/recipes/${extraer}`)
 .then(function(response){
     return response.json();
 })
 .then(
     function(data){
         console.log(data);
-        let seccion_cat = document.querySelector(".lpm")
+        let seccion_cat = document.querySelector(".seccion_detalles_cat")
         let categoria = ""
-        let categoriasMostradas = []
+        
 
         for (let i=0; i<data.recipes.length; i++){
             if(!categoriasMostradas.includes(data.recipes[i].mealType)){categoriasMostradas.push(data.recipes[i].mealType)}

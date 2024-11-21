@@ -10,14 +10,19 @@ fetch('https://dummyjson.com/recipes')
         let categoriasMostradas = []
 
         for (let i=0; i<data.recipes.length; i++){
-            if(!categoriasMostradas.includes(data.recipes[i].cuisine)){categoriasMostradas.push(data.recipes[i].cuisine)}
-            categoria += `<article>
-            <a class="categoria8" href= "./detallecat.html">${data.recipes[i].cuisine}</a>
-            </article>`;
+            if (!categoriasMostradas.includes(data.recipes[i].cuisine)){
+                categoriasMostradas.push(data.recipes[i].cuisine);}
             
         } 
-        seccion_cat.innerHTML=categoria
+        console.log(categoriasMostradas)
+        
        
+        for (let i=0; i<categoriasMostradas.length;i++){
+            categoria += `<article class="article_de_cada_categoria">
+            <a class="cada_categoria" href= "./detallecat.html">${categoriasMostradas[i]} </a>
+            </article>`
+       }
+       seccion_cat.innerHTML=categoria
     }
 )
 .catch(function(error)

@@ -20,10 +20,11 @@ fetch(`https://dummyjson.com/recipes/${extraer}`)
                 <article class="detalles_titulo_tp_tc">
                     <p><b>Tiempo de preparación:</b> ${data.prepTimeMinutes} minutos</p>
                     <p><b>Tiempo de cocción:</b> ${data.cookTimeMinutes} minutos</p>
-                    <a class="a_detalles_categoria" href="./categorias.html"><b>Categorias: </b>${data.mealType}</a>
+                    <a class="a_detalles_categoria" href="./detallecat.html"><b>Categorias: </b>${data.cuisine}</a>
                 </article>
-               
-                <p><b>Instrucciones:</b></p><p>${data.instructions}</p>
+                <article class="instrucciones_de_detalle">
+                    <p class="titulo_instrucciones"><b>Instrucciones:</b></p><p>${data.instructions}</p>
+                </article>
             </article>`
 })
 .catch( function (error){
