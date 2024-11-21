@@ -10,12 +10,10 @@ console.log(email);
 formulario.addEventListener('submit', function(event){
     event.preventDefault()
     if(email.value == ''){
-        console.log('Por favor complete el campo de email')
-        errorEmail.innerHTML = '<p class="alert">Por favor complete el campo de email</p>'
+        alert("Por favor completa el campo email")
     }
     else if(password.value == ''){
-        console.log('Por favor complete el campo de contraseña')
-        errorPassword.innerHTML = '<p class="alert">Por favor complete el campo de contraseña</p>'
+        alert("Por favor completa el campo contraseña")
     } else{
         formulario.submit()
     }

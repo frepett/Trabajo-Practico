@@ -218,7 +218,8 @@ footer p{
 }
 
 .alert{
-    background-color: rgb(224, 224, 88);
+    background-color: red;
+    color: white;
 }
 
 .terminos{
@@ -274,7 +275,7 @@ footer p{
     color: black;
 }
 .article_de_cada_categoria{
-    width: 40%;
+    width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
