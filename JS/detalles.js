@@ -3,7 +3,12 @@ let queryStringObjeto = new URLSearchParams(queryString)
 let extraer = queryStringObjeto.get("id")
 console.log(extraer)
 let seccion_detalles_de_recetas=document.querySelector(".seccion_detalles_de_recetas")
-
+let h2 = document.querySelector("h2")
+let img = document.querySelector(".imagen_receta_detalles")
+let tiempo = document.querySelector(".tiempo")
+let tiempoC = document.querySelector(".tiempoC")
+let CategoriaLista = document.querySelector(".Categoriasul")
+let Instrucciones = document.querySelector(".InstruccionesD")
 
 fetch(`https://dummyjson.com/recipes/${extraer}`)
 .then(function(response){
@@ -11,21 +16,16 @@ fetch(`https://dummyjson.com/recipes/${extraer}`)
 })
 .then(function(data){
     console.log(data);
-    seccion_detalles_de_recetas.innerHTML += `<article class="article_detalles_receta">
-                <div class="detalles_titulo_solo">
-                    <h2>${data.name}</h2>
-                </div>
+    h2.innerText = data.name
+    img.src = data.image
+    tiempo.innerText += data.prepTimeMinutes
+    tiempoC.innerText += data.cookTimeMinutes
+    Instrucciones.innerText += data.instructions
 
-                <img src="${data.image}" alt="" class="imagen_receta_detalles">
-                <article class="detalles_titulo_tp_tc">
-                    <p><b>Tiempo de preparación:</b> ${data.prepTimeMinutes} minutos</p>
-                    <p><b>Tiempo de cocción:</b> ${data.cookTimeMinutes} minutos</p>
-                    <a class="a_detalles_categoria" href="./detallecat.html"><b>Categorias: </b>${data.cuisine}</a>
-                </article>
-                <article class="instrucciones_de_detalle">
-                    <p class="titulo_instrucciones"><b>Instrucciones:</b></p><p>${data.instructions}</p>
-                </article>
-            </article>`
+    for(let i = 0; i<data.tags.length; i++){
+        CategoriaLista.innerHTML +=  `<li><a class="" href="./detallecat.html?tags=${data.tags[i]}">${data.tags[i]}</a></li>`
+    }
+   
 })
 .catch( function (error){
     console.log(error);

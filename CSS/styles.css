@@ -350,6 +350,28 @@ footer p{
 
 }
 
+/*-------------------------------------------Deetalles de Categorias---------------------------------*/
+.seccion_detalles_cat{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.articleDC{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    margin: 10px;
+    margin-top: 20px;
+}
+.imgDC{
+    border-radius:120px;
+    margin-bottom: 20px;
+}
+
 /*-------------------------------------------resolucion mobile---------------------------------*/
 
 @media(max-width: 650px){
