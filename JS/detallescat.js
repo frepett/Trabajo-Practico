@@ -2,7 +2,7 @@ let queryString = location.search
 let queryStringObjeto = new URLSearchParams(queryString)
 let tag = queryStringObjeto.get("tags")
 
-fetch(`https://dummyjson.com/recipes`)
+fetch(`https://dummyjson.com/recipes/tag/${tag}`)
 .then(function(response){
     return response.json();
 })
@@ -16,13 +16,14 @@ fetch(`https://dummyjson.com/recipes`)
 
         for (let i=0; i<data.recipes.length; i++){
             if(data.recipes[i].tags.includes(tag)){
-                categoria+= `<article>
+                categoria += `<article>
             <img src=${data.recipes[i].image} alt = "" >
             <article class="article_foto_plato"><a class="plato" href="./detalles.html?id=${data.recipes[i].id}">
             Plato: ${data.recipes[i].name}</a>
             <p class="dificultad" >Dificultad: ${data.recipes[i].difficulty}</p></article>
             </article>`} 
-        seccion_cat.innerHTML
+        
+        seccion_cat.innerHTML = categoria
     }})
 
     
