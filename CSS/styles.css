@@ -167,6 +167,25 @@ footer p{
     font-size: 20px;
 }
 
+.h12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: rgba(165, 42, 42, 0.568);
+    color: black;
+    border-radius: 90px;
+    border-color: rgba(123, 25, 25, 0.568);
+    height: 100px;
+
+}
+.h1adentro{
+    color: white;
+    font-size: bold;
+    font-size: 50px;
+}
+
 /*--------------------------------------------------------login y registro-------------------------------------------------------*/
 
 .bodylogin{
