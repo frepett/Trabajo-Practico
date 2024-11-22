@@ -372,6 +372,15 @@ footer p{
     margin-bottom: 20px;
 }
 
+.Categoriasul{
+    text-decoration: none;
+    list-style: none;
+}
+
+.liCate{
+    text-decoration: none;
+    color: white;
+}
 /*-------------------------------------------resolucion mobile---------------------------------*/
 
 @media(max-width: 650px){
