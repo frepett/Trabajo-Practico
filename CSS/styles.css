@@ -402,18 +402,54 @@ footer p{
 }
 /*-------------------------------------------resolucion mobile---------------------------------*/
 
-@media(max-width: 680px){
+@media(max-width: 480px){
 
   .main_index{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: fit-content;
-  }  
-  .main_index img{
     width: 100%;
+  }  
+
+  .main_index img{
+    width: 80%;
+  }
+  
+  .article_de_fotos{
+    width: 90%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
 
   }
+  
+  .h12{
+    display: none;
+  }
+
+  .article_de_cada_categoria{
+    width: 40%;
+  }
+
+  .nav_index{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+  }
+
+  .nav_index a{
+    margin-top: 15px;
+    
+  }
+
+  header {
+    background-image: none;
+    background-color: rgb(255, 245, 235);
+  }
+
 }
