@@ -402,6 +402,18 @@ footer p{
 }
 /*-------------------------------------------resolucion mobile---------------------------------*/
 
-@media(max-width: 650px){
+@media(max-width: 680px){
 
+  .main_index{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: fit-content;
+  }  
+  .main_index img{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
 }
