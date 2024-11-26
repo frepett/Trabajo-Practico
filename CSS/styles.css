@@ -452,4 +452,32 @@ footer p{
     background-color: rgb(255, 245, 235);
   }
 
+  .main_detalles{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  .seccion_detalles_de_recetas{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .seccion_detalles_de_recetas img{
+    width: 80%;
+  }
+
+  .detalles_titulo_tp_tc{
+    width: 60%;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+    
+  }
 }
