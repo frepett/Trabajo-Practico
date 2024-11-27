@@ -18,7 +18,7 @@ fetch(`https://dummyjson.com/recipes/tag/${tag}`)
             if(data.recipes[i].tags.includes(tag)){
                 categoria += `<article class="articleDC">
             <img class="imgDC" src=${data.recipes[i].image} alt = "" >
-            <article class="article_foto_plato"><a class="plato" href="./detalles.html?id=${data.recipes[i].id}">
+            <article class="article_foto_plato"><a class="plato" href="./receta.html?id=${data.recipes[i].id}">
             Plato: ${data.recipes[i].name}</a>
             <p class="dificultad" >Dificultad: ${data.recipes[i].difficulty}</p></article>
             </article>`} 

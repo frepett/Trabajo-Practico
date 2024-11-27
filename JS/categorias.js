@@ -10,7 +10,7 @@ fetch("https://dummyjson.com/recipes/tags")
 
         for (let i=0; i<data.length;i++){
             categoria += `<article class="article_de_cada_categoria">
-            <a class="cada_categoria" href= "./detallecat.html?tags=${data[i]}">${data[i]} </a>
+            <a class="cada_categoria" href= "./category.html?tags=${data[i]}">${data[i]} </a>
             </article>`
        }
        seccion_cat.innerHTML=categoria
