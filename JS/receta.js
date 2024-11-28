@@ -23,7 +23,7 @@ fetch(`https://dummyjson.com/recipes/${extraer}`)
     Instrucciones.innerText += data.instructions
 
     for(let i = 0; i<data.tags.length; i++){
-        CategoriaLista.innerHTML +=  `<li class="liCat"><a class="liCate" href="./detallecat.html?tags=${data.tags[i]}">${data.tags[i]}</a></li>`
+        CategoriaLista.innerHTML +=  `<li class="liCat"><a class="liCate" href="./category.html?tags=${data.tags[i]}">${data.tags[i]}</a></li>`
     }
    
 })
