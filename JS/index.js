@@ -21,10 +21,10 @@ fetch('https://dummyjson.com/recipes')
         menu.innerHTML=titulo
 
         
-        let cargarmas = document.querySelector('.button_cargarmas')
-        let fotos_cargadas=10;
-        cargarmas.addEventListener('click', function(){
-            for(let i = fotos_cargadas;i<fotos_cargadas+10 ;i++){
+        let cargarMas = document.querySelector('.button_cargarmas')
+        let fotos_Cargadas=10;
+        cargarMas.addEventListener('click', function(){
+            for(let i = fotos_Cargadas;i<fotos_Cargadas+10 ;i++){
                 titulo += `<article class="article_de_fotos">
                  <img src=${data.recipes[i].image} alt = "" >
                 <article class="article_foto_plato"><a class="plato" href="./receta.html?id=${data.recipes[i].id}">
@@ -32,7 +32,7 @@ fetch('https://dummyjson.com/recipes')
                  <p class="dificultad">Dificultad: ${data.recipes[i].difficulty}</p></article>
                 </article>`;
             }
-            fotos_cargadas=fotos_cargadas+10;
+            fotos_Cargadas=fotos_Cargadas+10;
             menu.innerHTML=titulo
 
         })
@@ -41,15 +41,15 @@ fetch('https://dummyjson.com/recipes')
 
 let formulario =document.querySelector(".formulario_index")
 let buscador=document.querySelector(".buscador")
-let div_error=document.querySelector(".formulario_index_menos_que3")
+let div_Error=document.querySelector(".formulario_index_menos_que3")
 
  formulario.addEventListener("submit",function(evento){
     evento.preventDefault()
 
 
     if (buscador.value.length < 3){
-        div_error.style.display="block"
-        div_error.innerHTML="<p>La busqueda tiene que tener mino 3 caracteres</p>"
+        div_Error.style.display="block"
+        div_Error.innerHTML="<p>La busqueda tiene que tener mino 3 caracteres</p>"
     }else{
      this.submit()
     }

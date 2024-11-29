@@ -5,7 +5,7 @@ fetch("https://dummyjson.com/recipes/tags")
 .then(
     function(data){
         console.log(data);
-        let seccion_cat = document.querySelector(".picante")
+        let seccion_Cat = document.querySelector(".picante")
         let categoria = ""
 
         for (let i=0; i<data.length;i++){
@@ -13,7 +13,7 @@ fetch("https://dummyjson.com/recipes/tags")
             <a class="cada_categoria" href= "./category.html?tags=${data[i]}">${data[i]} </a>
             </article>`
        }
-       seccion_cat.innerHTML=categoria
+       seccion_Cat.innerHTML=categoria
             
         } 
         

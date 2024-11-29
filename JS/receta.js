@@ -2,7 +2,7 @@ let queryString = location.search
 let queryStringObjeto = new URLSearchParams(queryString)
 let extraer = queryStringObjeto.get("id")
 console.log(extraer)
-let seccion_detalles_de_recetas=document.querySelector(".seccion_detalles_de_recetas")
+let seccion_Detalles_De_Recetas=document.querySelector(".seccion_detalles_de_recetas")
 let h2 = document.querySelector("h2")
 let img = document.querySelector(".imagen_receta_detalles")
 let tiempo = document.querySelector(".tiempo")

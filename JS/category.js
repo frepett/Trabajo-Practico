@@ -10,7 +10,7 @@ fetch(`https://dummyjson.com/recipes/tag/${tag}`)
 .then(
     function(data){
         console.log(data);
-        let seccion_cat = document.querySelector(".seccion_detalles_cat")
+        let seccion_Cat = document.querySelector(".seccion_detalles_cat")
         let categoria = ""
         
 
@@ -23,7 +23,7 @@ fetch(`https://dummyjson.com/recipes/tag/${tag}`)
             <p class="dificultad" >Dificultad: ${data.recipes[i].difficulty}</p></article>
             </article>`} 
         
-        seccion_cat.innerHTML = categoria
+        seccion_Cat.innerHTML = categoria
     }})
 
     
