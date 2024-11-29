@@ -19,24 +19,41 @@ fetch('https://dummyjson.com/recipes')
             
         } 
         menu.innerHTML=titulo
+    })  
+    .catch(function(error){
+        console.log(error)
+    })
 
         
-        let cargarMas = document.querySelector('.button_cargarmas')
-        let fotos_Cargadas=10;
+    let cargarMas = document.querySelector('.button_cargarmas')
+    let fotos_Cargadas=10;
         cargarMas.addEventListener('click', function(){
-            for(let i = fotos_Cargadas;i<fotos_Cargadas+10 ;i++){
-                titulo += `<article class="article_de_fotos">
-                 <img src=${data.recipes[i].image} alt = "" >
-                <article class="article_foto_plato"><a class="plato" href="./receta.html?id=${data.recipes[i].id}">
-                 Plato: ${data.recipes[i].name}</a>
-                 <p class="dificultad">Dificultad: ${data.recipes[i].difficulty}</p></article>
-                </article>`;
-            }
-            fotos_Cargadas=fotos_Cargadas+10;
-            menu.innerHTML=titulo
+            fetch(`https://dummyjson.com/recipes?limit=10&skip=${fotos_Cargadas}`)
+            .then(function(response){
+                return response.json();
+            })
 
+            .then(function(data){
+                console.log(data);
+                let menu = document.querySelector(".menu")
+                let titulo =""
+
+                for(let i = 0;i<10 ;i++){
+                    titulo += `<article class="article_de_fotos">
+                     <img src=${data.recipes[i].image} alt = "" >
+                    <article class="article_foto_plato"><a class="plato" href="./receta.html?id=${data.recipes[i].id}">
+                     Plato: ${data.recipes[i].name}</a>
+                     <p class="dificultad">Dificultad: ${data.recipes[i].difficulty}</p></article>
+                    </article>`;
+                }
+                fotos_Cargadas=fotos_Cargadas+10;
+                menu.innerHTML+=titulo
+    
         })
-})
+        .catch(function(error){
+            console.log(error)
+        })
+        });
 
 
 let formulario =document.querySelector(".formulario_index")
@@ -57,8 +74,7 @@ let div_Error=document.querySelector(".formulario_index_menos_que3")
  }  
 )
 
-.catch(function(error){
-    console.log(error)
-})
+
+
 
 

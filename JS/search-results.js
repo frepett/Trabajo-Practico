@@ -22,7 +22,17 @@ fetch(`https://dummyjson.com/recipes/search?q=${extraer}`)
 
  }
 
+ let fepe = document.querySelector(".polaco")
+ console.log(fepe)
+ fepe.innerText =`Resultados: ${extraer}`
+ if (data.recipes.length==0){
+     fepe.innerText =`Resultados:No se encontro ${extraer}`
+}
+
+}).catch( function (error){
+    console.log(error);
 })
+
 let formulario =document.querySelector(".formulario_index")
 let buscador=document.querySelector(".buscador")
 let div_Error=document.querySelector(".formulario_index_menos_que3")
@@ -33,13 +43,12 @@ let div_Error=document.querySelector(".formulario_index_menos_que3")
 
     if (buscador.value.length < 3){
         div_Error.style.display="block"
-        div_Error.innerHTML="<p>La busqueda tiene que tener mino 3 caracteres</p>"
+        div_Error.innerHTML="<p>La busqueda tiene que tener minimo 3 caracteres</p>"
     }else{
      this.submit()
     }
-
  }  
 )
-.catch( function (error){
-    console.log(error);
-})
+
+
+    

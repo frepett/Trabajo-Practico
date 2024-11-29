@@ -25,9 +25,29 @@ fetch(`https://dummyjson.com/recipes/tag/${tag}`)
         
         seccion_Cat.innerHTML = categoria
     }})
-
-    
-
 .catch(function(error){
     console.log(error)
 })
+
+let formulario =document.querySelector(".formulario_index")
+    let buscador=document.querySelector(".buscador")
+    let div_Error=document.querySelector(".formulario_index_menos_que3")
+    
+     formulario.addEventListener("submit",function(evento){
+        evento.preventDefault()
+    
+    
+        if (buscador.value.length < 3){
+            div_Error.style.display="block"
+            div_Error.innerHTML="<p>La busqueda tiene que tener mino 3 caracteres</p>"
+        }else{
+         this.submit()
+        }
+    
+     }  
+    )
+
+let fepe = document.querySelector(".h212")
+console.log(fepe)
+    fepe.innerText =`Resultados: ${tag}`
+    

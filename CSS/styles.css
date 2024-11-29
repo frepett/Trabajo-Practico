@@ -309,6 +309,23 @@ footer p{
     color: white;
     font-weight: bold;
 }
+
+.h212{
+    margin: 5px;
+    background-color:rgba(165, 42, 42, 0.568);
+    padding: 10px;
+    border-radius: 13px;
+    border:2px, solid, rgba(117, 34, 22, 0.689);
+}
+
+.polaco{
+    color: white;
+    margin: 5px;
+    background-color:rgba(165, 42, 42, 0.568);
+    padding: 10px;
+    border-radius: 13px;
+    border:2px, solid, rgba(117, 34, 22, 0.689);
+}
 /*----------------------------------------------------detalles de recetas-------------------------------------------*/
 .main_detalles{
     padding-top: 25px;
@@ -506,7 +523,7 @@ footer p{
     }
     
     .h12{
-      display: none;
+      width: 100%;
     }
   
     .article_de_cada_categoria{
